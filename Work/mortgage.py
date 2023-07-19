@@ -11,4 +11,4 @@ while principal > 0:
     principal = principal * (1+interest_rate/12) - monthly_payment
     total_paid = total_paid + monthly_payment
 
-print('Total paid:', round(total_paid, ndigits=2))
+print(f'Total paid: {total_paid:.2f}!')
