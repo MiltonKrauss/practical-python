@@ -17,14 +17,14 @@ while principal > 0:
         principal = round(principal * (1+interest_rate/12) - (monthly_payment + extra_payment), 2)
         total_paid = round(total_paid + (monthly_payment + extra_payment), 2)
         month_number = month_number + 1
-        print(month_number, total_paid, principal)
+        print(f'{month_number:3.0f} {total_paid:10.2f} {principal:10.2f}')
     principal = round(principal * (1+interest_rate/12) - monthly_payment, 2)
     total_paid = round(total_paid + monthly_payment, 2)
     month_number = month_number + 1
-    print(month_number, total_paid, principal)
+    print(f'{month_number:3.0f} {total_paid:10.2f} {principal:10.2f}')
 
     if principal < monthly_payment:
         monthly_payment = principal * (1+interest_rate/12)
 
-print(f'Total paid: {total_paid:.2f}!')
-print('Total number of months:', month_number)
+print(f'Total paid: ${total_paid:.2f}!')
+print(f'Total number of months: {month_number}')
